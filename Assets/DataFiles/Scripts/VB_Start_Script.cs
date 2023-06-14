@@ -11,6 +11,7 @@ public class VB_Start_Script : MonoBehaviour
     VirtualButtonBehaviour vrb;
     string token = "89C1672AC82243398BAD6B6A3AB5610F";
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,7 @@ public class VB_Start_Script : MonoBehaviour
     public void OnButtonPressed(VirtualButtonBehaviour vb)
     {
         Debug.Log("Button Pressed");
-        Coroutine OctoprintHTTPRequest = StartCoroutine(getRequest("http://homer.local/api/server", token));
+        Coroutine StartPrintRequest = StartCoroutine(getRequest("http://homer.local/api/server", token));
 
     }
 
